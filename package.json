@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/geoyws/likesbeforelove/issues"
   },
-  "homepage": "https://github.com/geoyws/likesbeforelove"
+  "homepage": "https://github.com/geoyws/likesbeforelove",
   "engines": {
     "node": *
   }
