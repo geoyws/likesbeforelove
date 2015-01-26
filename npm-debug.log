@@ -1,0 +1,143 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express-generator',
+1 verbose cli   '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.34
+4 verbose cache add [ 'express-generator', null ]
+5 verbose cache add name=undefined spec="express-generator" args=["express-generator",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'express-generator',
+6 verbose parsed url   path: 'express-generator',
+6 verbose parsed url   href: 'express-generator' }
+7 silly lockFile 198a68d8-express-generator express-generator
+8 verbose lock express-generator /Users/geoyws/.npm/198a68d8-express-generator.lock
+9 silly lockFile 198a68d8-express-generator express-generator
+10 silly lockFile 198a68d8-express-generator express-generator
+11 verbose addNamed [ 'express-generator', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile bd41e3d3-express-generator express-generator@
+14 verbose lock express-generator@ /Users/geoyws/.npm/bd41e3d3-express-generator.lock
+15 silly addNameRange { name: 'express-generator', range: '*', hasData: false }
+16 silly addNameRange number 2 { name: 'express-generator', range: '*', hasData: true }
+17 silly addNameRange versions [ 'express-generator',
+17 silly addNameRange   [ '1.0.0',
+17 silly addNameRange     '3.0.0',
+17 silly addNameRange     '4.0.0',
+17 silly addNameRange     '4.2.0',
+17 silly addNameRange     '4.8.0',
+17 silly addNameRange     '4.9.0',
+17 silly addNameRange     '4.10.0',
+17 silly addNameRange     '4.11.0',
+17 silly addNameRange     '4.11.1' ] ]
+18 verbose addNamed [ 'express-generator', '4.11.1' ]
+19 verbose addNamed [ '4.11.1', '4.11.1' ]
+20 silly lockFile 88ecaa4c-express-generator-4-11-1 express-generator@4.11.1
+21 verbose lock express-generator@4.11.1 /Users/geoyws/.npm/88ecaa4c-express-generator-4-11-1.lock
+22 silly lockFile 78a36c2b-tor-express-generator-4-11-1-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz
+23 verbose lock https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz /Users/geoyws/.npm/78a36c2b-tor-express-generator-4-11-1-tgz.lock
+24 verbose addRemoteTarball [ 'https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz',
+24 verbose addRemoteTarball   '4c14710dec8285520174f64407150431ecc84cec' ]
+25 info retry fetch attempt 1 at 09:03:30
+26 verbose fetch to= /var/folders/rm/62v284sj5z52xs6898md51cm0000gn/T/npm-17803-X9JOoXY_/registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz
+27 http GET https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz
+28 http 200 https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz
+29 silly lockFile 78a36c2b-tor-express-generator-4-11-1-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz
+30 silly lockFile 78a36c2b-tor-express-generator-4-11-1-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz
+31 silly lockFile 88ecaa4c-express-generator-4-11-1 express-generator@4.11.1
+32 silly lockFile 88ecaa4c-express-generator-4-11-1 express-generator@4.11.1
+33 silly lockFile bd41e3d3-express-generator express-generator@
+34 silly lockFile bd41e3d3-express-generator express-generator@
+35 silly resolved [ { name: 'express-generator',
+35 silly resolved     description: 'Express\' application generator',
+35 silly resolved     version: '4.11.1',
+35 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+35 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+35 silly resolved     keywords:
+35 silly resolved      [ 'express',
+35 silly resolved        'framework',
+35 silly resolved        'sinatra',
+35 silly resolved        'web',
+35 silly resolved        'rest',
+35 silly resolved        'restful',
+35 silly resolved        'router',
+35 silly resolved        'app',
+35 silly resolved        'api' ],
+35 silly resolved     repository: { type: 'git', url: 'https://github.com/expressjs/generator' },
+35 silly resolved     license: 'MIT',
+35 silly resolved     dependencies: { commander: '2.6.0', mkdirp: '0.5.0', 'sorted-object': '1.0.0' },
+35 silly resolved     main: 'bin/express',
+35 silly resolved     preferGlobal: true,
+35 silly resolved     bin: { express: './bin/express' },
+35 silly resolved     devDependencies:
+35 silly resolved      { after: '0.8.1',
+35 silly resolved        mocha: '~2.1.0',
+35 silly resolved        rimraf: '~2.2.8',
+35 silly resolved        supertest: '~0.15.0' },
+35 silly resolved     engines: { node: '>= 0.10' },
+35 silly resolved     files: [ 'LICENSE', 'bin/', 'templates/' ],
+35 silly resolved     scripts:
+35 silly resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
+35 silly resolved        'test-travis': 'mocha --reporter spec --bail --check-leaks test/' },
+35 silly resolved     gitHead: 'c556313ff1ad5a8c31ffb31b084e681545940ee0',
+35 silly resolved     bugs: { url: 'https://github.com/expressjs/generator/issues' },
+35 silly resolved     homepage: 'https://github.com/expressjs/generator',
+35 silly resolved     _id: 'express-generator@4.11.1',
+35 silly resolved     _shasum: '4c14710dec8285520174f64407150431ecc84cec',
+35 silly resolved     _from: 'express-generator@',
+35 silly resolved     _npmVersion: '1.4.28',
+35 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+35 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+35 silly resolved     dist:
+35 silly resolved      { shasum: '4c14710dec8285520174f64407150431ecc84cec',
+35 silly resolved        tarball: 'http://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz' },
+35 silly resolved     directories: {},
+35 silly resolved     _resolved: 'https://registry.npmjs.org/express-generator/-/express-generator-4.11.1.tgz' } ]
+36 info install express-generator@4.11.1 into /usr/local/lib
+37 info installOne express-generator@4.11.1
+38 verbose lib/node_modules/express-generator unbuild
+39 verbose tar unpack /Users/geoyws/.npm/express-generator/4.11.1/package.tgz
+40 silly lockFile 2135fd25-b-node-modules-express-generator tar:///usr/local/lib/node_modules/express-generator
+41 verbose lock tar:///usr/local/lib/node_modules/express-generator /Users/geoyws/.npm/2135fd25-b-node-modules-express-generator.lock
+42 silly lockFile 0e764a91-ess-generator-4-11-1-package-tgz tar:///Users/geoyws/.npm/express-generator/4.11.1/package.tgz
+43 verbose lock tar:///Users/geoyws/.npm/express-generator/4.11.1/package.tgz /Users/geoyws/.npm/0e764a91-ess-generator-4-11-1-package-tgz.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 error Error: EACCES, mkdir '/usr/local/lib/node_modules/express-generator'
+45 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/express-generator']
+45 error   errno: 3,
+45 error   code: 'EACCES',
+45 error   path: '/usr/local/lib/node_modules/express-generator',
+45 error   fstream_type: 'Directory',
+45 error   fstream_path: '/usr/local/lib/node_modules/express-generator',
+45 error   fstream_class: 'DirWriter',
+45 error   fstream_stack:
+45 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+45 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+45 error      'Object.oncomplete (fs.js:108:15)' ] }
+46 error Please try running this command again as root/Administrator.
+47 error System Darwin 14.0.0
+48 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "express-generator" "-g"
+49 error cwd /Users/geoyws/Documents/github/likesbeforelove
+50 error node -v v0.10.34
+51 error npm -v 1.4.28
+52 error path /usr/local/lib/node_modules/express-generator
+53 error fstream_path /usr/local/lib/node_modules/express-generator
+54 error fstream_type Directory
+55 error fstream_class DirWriter
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/express-generator'
+59 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+59 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+59 error fstream_stack Object.oncomplete (fs.js:108:15)
+60 verbose exit [ 3, true ]

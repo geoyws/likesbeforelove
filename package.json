@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/geoyws/likesbeforelove",
   "engines": {
-    "node": *
+    "node": "*"
+  },
+  "dependencies": {
+    "express": "^4.11.1"
   }
 }
