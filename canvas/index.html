@@ -10,8 +10,13 @@
     <script src="js/ui.js"></script>
   </head>
   <body>
-    Likesbeforelove
-    <div class="first-name"></div>
-    <div class="profile"></div>    
+    <div id="fb-root"></div>
+    <div id="welcome">
+      <div>Likesbeforelove</div>
+      <div class="first-name"></div>
+      <div class="profile"></div>
+      <button onclick="login();">Login with Facebook</button>
+      <button onclick="FB.logout(function(response) {});$('.first-name, .profile').empty();">Logout</button>    
+    </div>
   </body>
 </html>
