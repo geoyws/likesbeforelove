@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Likesbeforelove Facebook App</title>
+    <script src="http://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/social.js"></script>
+    <script src="js/ui.js"></script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div id="welcome">
+      <div>Likesbeforelove</div>
+      <div class="first-name"></div>
+      <div class="profile"></div>
+      <button onclick="login();">Login with Facebook</button>
+      <button onclick="FB.logout(function(response) {});$('.first-name, .profile').empty();">Logout</button>    
+    </div>
+  </body>
+</html>

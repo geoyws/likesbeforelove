@@ -1,11 +1,12 @@
 function login () {
   $(function () {
     FB.init({
-      appId: 1027803050567274,
+      appId: '1027803050567274',
+      cookie: true,
       frictionlessRequests: true,
       status: true,
-      xfbml: false,
-      version: 'v2.0'
+      xfbml: true,
+      version: 'v2.1'
     });
 
     FB.Event.subscribe('auth.authResponseChange', onAuthResponseChange);
