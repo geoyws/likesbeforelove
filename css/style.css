@@ -9,14 +9,13 @@
 .grid-cell-2 { flex: 2; }
 .grid-cell-3 { flex: 3; }
 
-.slide-holder { position: relative; }
+.slider-holder { position: relative; }
 
 .slide {
     position: absolute; 
 }
 
 slide-1 {
-    background: url("http://www.missuniversemalaysia.com.my/images/deborah_henry.jpg") no-repeat top left;
 }
 
 .slide img { 
@@ -30,6 +29,10 @@ slide-3 {}
 .section-padding { 
     padding: 20px; 
     border: 0px solid black; 
+}
+
+bottom-section {
+  margin: 20px 0 0 0;
 }
 
 most-followed > div {
