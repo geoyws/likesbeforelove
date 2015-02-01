@@ -1,38 +1,38 @@
-<!doctype html>
+<doctype html>
 <head>
   <title>Likesbeforelove</title>
   <meta charset="UTF-8">
-  <script src="js/app.js"></script>
   <script src="bower-components/jquery/dist/jquery.js"></script>
+  <script src="bower-components/angular/angular.js></script>
+  <script src="bower-components/angular-route/angular-route.js"></script>
+  <script src="bower-components/angular-resource/angular-resource.js"></script>
+  <script src="bower-components/angular-material/angular-material.js"></script>
+  <script src="bower-components/angular-aria/angular-aria.js"></script>
+  <script src="bower-components/angular-animate/angular-animate.js"></script>
+  <script src="js/app.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
   <div id="status">
   </div>
-  <page-holder block>
-    <top-section block grid>
-      <slider-holder grid-cell-2>
-        <slide-1 block slide>
+  <page-holder class="block">
+    <top-section class="block grid">
+      <slider-holder class="grid-cell-2">
+        <slide-1 class="block slide">
           <img src="http://www.missuniversemalaysia.com.my/images/deborah_henry.jpg" />
         </slide-1>
-        <slide-2 block slide>
+        <slide-2 class="block slide">
           Test Slide 2
         </slide-2>
-        <slide-3 block slide>
+        <slide-3 class="block slide">
           Test Slide 3
         </slide-3>
       </slider-holder>
-      <most-followed grid-cell-1 section-padding>
+      <most-followed class="grid-cell-1 section-padding">
         <div>MOST FOLLOWED</div>
-        <table most-followed>
+        <table class="most-followed">
           <tr>
             <td>1241</td>
             <td>Gloria Tneh</td>
@@ -74,26 +74,25 @@
             <td>Sugeeta Chandran</td>
           </tr>
         </table>
-        <view-their-profiles button>VIEW THEIR PROFILES</view-their-profiles>
+        <view-their-profiles class="button">VIEW THEIR PROFILES</view-their-profiles>
       </most-followed>
-      <likes-before-love grid-cell-1 section-padding>
-        <logo-border block>
+      <likes-before-love class="grid-cell-1 section-padding">
+        <logo-border class="block">
           <div>LIKES</div>
           <div>BEFORE</div>
           <div>LOVE</div>
           <div>.COM</div>
         </logo-border>
-        <description-holder block>
+        <description-holder class="block">
           Show your love and support! The winner of the Miss Universe Malaysia 2015 Social Media Subsidiary Title will be chosen from the Top 5!
         </description-holder>
-        <find-out-more button>FIND OUT MORE</find-out-more>
+        <find-out-more class="button">FIND OUT MORE</find-out-more>
       </likes-before-love>
     </top-section>
-    <bottom-section block>
+    <bottom-section class="block">
     <!--Get all posts from finalists and append them here in a grid-->
     <div class="fb-post" data-href="https://www.facebook.com/nisha.kumar.58/posts/10206095045120921" data-width="500"></div>
     </bottom-section>
   </page-holder>
 </body>
-
 </html>

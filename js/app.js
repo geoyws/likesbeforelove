@@ -1,4 +1,33 @@
+'use strict';
+
+var FB_API = 'https://graph.facebook.com';
+var token = '';
+
+var lbl = angular.module('lbl', [
+  'ngRoute',
+  'ngMaterial',
+  'ngResource',
+  //'lblAnimations',
+  'lblControllers',
+  'lblServices'
+]); 
+
+lbl.config([
+  '$routeProvider',
+  function($routeProvider) {
+    $routeProvider
+    .when('/', {
+      templateUrl: 'partials/home.html',
+      controller: 'homeCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+  }
+]);
+
 // This is called with the results from from FB.getLoginStatus().
+
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -24,6 +53,7 @@ function statusChangeCallback(response) {
 // This function is called when someone finishes with the Login
 // Button.  See the onlogin handler attached to it in the sample
 // code below.
+
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
 	statusChangeCallback(response);
