@@ -1,43 +1,3 @@
-'use strict';
-
-var FB_API = 'https://graph.facebook.com';
-var token = '';
-var finalistUrls = {
-    'Ashley Ahn': '/ashleyahnsii',
-    'Kohinoor Kaur': '/kohinoorkk',
-    'Jasveer Sandhu': '/pages/Jasveer-Sandhu/154792604676738',
-    'Gloria Tneh': '/pages/Gloria-Tneh/423298084491206',
-    'Amanda Khong': '/profile.php?id=688227238',
-    'Jagan Kelly': '/jagan.kelly',
-    'Pauline Thong': '/pauline.thong.9',
-    'Shaelina Patrick': '/profile.php?id=569370091'
-};
-
-/*
-var lbl = angular.module('lbl', [
-  'ngRoute',
-  'ngMaterial',
-  'ngResource',
-  //'lblAnimations',
-  'lblControllers',
-  'lblServices'
-]); 
-
-lbl.config([
-  '$routeProvider',
-  function($routeProvider) {
-    $routeProvider
-    .when('/', {
-      templateUrl: 'partials/home.html',
-      controller: 'homeCtrl'
-    })
-    .otherwise({
-      redirectTo: '/'
-    });
-  }
-]);
-*/
-
 // This is called with the results from from FB.getLoginStatus().
 
 function statusChangeCallback(response) {
@@ -72,7 +32,7 @@ function checkLoginState() {
     });
 }
 
-window.fbAsyncInit = function() {
+window.fbAsyncInit = function () {
     FB.init({
 	appId: '1027803050567274',
 	cookie: true, // enable cookies to allow the server to access 
@@ -93,29 +53,23 @@ window.fbAsyncInit = function() {
     //
     // These three cases are handled in the callback function.
 
-    FB.getLoginStatus(function(response) {
+    FB.getLoginStatus(function (response) {
 	statusChangeCallback(response);
     });
 
 };
 
-// Load the SDK asynchronously
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
+    console.log('Welcome! Fetching your information.... ');
+    FB.api('/me', function (response) {
 	console.log('Successful login for: ' + response.name);
 	document.getElementById('status').innerHTML =
 	    'Thanks for logging in, ' + response.name + '!';
+    });
+    FB.api('/113124472034820', function (response) {
+      console.log(response);
+      console.log('haha');
     });
 }
