@@ -1,18 +1,23 @@
 /* std stands for Standard Models */
 
 var std = {
-  appendOnce: function (selector, content) {
-    document.querySelectorAll(selector)[0].innerHTML(string);
+  appendOnce: function (selector, element, content) {
+    var newElement = document.createElement(element);
+    newElement.innerHTML = content;
+    document.querySelectorAll(selector)[0].appendChild(newElement);
   },
-  append: function (selector, content) {
+  appendAll: function (selector, element, content) {
+    var newElement = document.createElement(element);
+    newElement.innerHTML = content;
     var array = document.querySelectorAll(selector);
     for (var i = 0; i < array.length; i++) {
-      array[i].innerHTML = content;
+      array[i].appendChild(newElement);
     }
   },
   toast: function (string) {
     // create a fixed position element that floats on the top right corner stating a short toast of 3 seconds, dismissible upon click.
-    console.log(string);
+    var content = string;
+    std.appendOnce('body', 'toast-notification', content);
   },
   ajax: function (requestType, url, requestBody) {
     var requestObj = false;
