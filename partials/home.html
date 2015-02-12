@@ -1,0 +1,73 @@
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1027803050567274',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+    // Place following code after FB.init call.
+
+    function onLogin(response) {
+      if (response.status == 'connected') {
+	FB.api('/me?fields=first_name', function(data) {
+	  var welcomeBlock = document.getElementById('fb-welcome');
+	  welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+	});
+      }
+    }
+
+    FB.getLoginStatus(function(response) {
+      // Check login status on load, and if the user is
+      // already logged in, go directly to the welcome message.
+      if (response.status == 'connected') {
+	onLogin(response);
+      } else {
+	// Otherwise, show Login dialog first.
+	FB.login(function(response) {
+	  onLogin(response);
+	}, {scope: 'user_friends, email'});
+      }
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<home-page block>
+  <top-section layout="row" layout-margin>
+    <slider-whiteframe flex flex-order="1">
+      <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+	<div>asdf</div>
+      </md-whiteframe>
+    </slider-whiteframe>
+    <likes-whiteframe flex flex-order="2">
+      <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+	<div>asdf</div>
+      </md-whiteframe>
+    </likes-whiteframe>
+    <logo-whiteframe flex flex-order="3">
+      <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+	<content-holder layout="column" layout-align="center center">
+	  <logo-holder>
+	    <div>LIKES</div>
+	    <div>BEFORE</div>
+	    <div>LOVE</div>
+	    <div>.COM</div>
+	  </logo-holder>
+	  <h1 id="fb-welcome"></h1>
+	</content-holder>
+      </md-whiteframe>
+    </logo-whiteframe>
+  </top-section>
+  <bottom-section block>
+    <grid-whiteframe block>
+    </grid-whiteframe>
+  </bottom-section>
+</home-page>

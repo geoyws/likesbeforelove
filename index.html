@@ -1,95 +1,33 @@
-<doctype html>
-<head>
-  <title>Likesbeforelove</title>
-  <meta charset="utf-8">
-  <script src="js/init.js"></script>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-  </fb:login-button>
-  <div id="status">
-  </div>
-  <page-holder class="block">
-    <top-section class="block grid">
-      <slider-holder class="grid-cell-2">
-        <slide-1 class="block slide">
-          <img src="http://www.missuniversemalaysia.com.my/images/deborah_henry.jpg" />
-        </slide-1>
-        <slide-2 class="block slide">
-          Test Slide 2
-        </slide-2>
-        <slide-3 class="block slide">
-          Test Slide 3
-        </slide-3>
-      </slider-holder>
-      <most-followed class="grid-cell-1 section-padding">
-        <div>MOST FOLLOWED</div>
-        <table class="most-followed">
-          <tr>
-            <td>1241</td>
-            <td>Gloria Tneh</td>
-          </tr>
-          <tr>
-            <td>1087</td>
-            <td>April Tang</td>
-          </tr>
-          <tr>
-            <td>1056</td>
-            <td>Jasveer Sandhu</td>
-          </tr>
-          <tr>
-            <td>1021</td>
-            <td>Shaelina Martin</td>
-          </tr>
-          <tr>
-            <td>928</td>
-            <td>Pauline Tan</td>
-          </tr>
-          <tr>
-            <td>920</td>
-            <td>Ashley Ahn</td>
-          </tr>
-          <tr>
-            <td>900</td>
-            <td>Venassa Tevi</td>
-          </tr>
-          <tr>
-            <td>849</td>
-            <td>Nisha Kumar</td>
-          </tr>
-          <tr>
-            <td>784</td>
-            <td>Kohinoor Kaur</td>
-          </tr>
-          <tr>
-            <td>754</td>
-            <td>Sugeeta Chandran</td>
-          </tr>
-        </table>
-        <view-their-profiles class="button">VIEW THEIR PROFILES</view-their-profiles>
-      </most-followed>
-      <likes-before-love class="grid-cell-1 section-padding">
-        <logo-border class="block">
-          <div>LIKES</div>
-          <div>BEFORE</div>
-          <div>LOVE</div>
-          <div>.COM</div>
-        </logo-border>
-        <description-holder class="block">
-          Show your love and support! The winner of the Miss Universe Malaysia 2015 Social Media Subsidiary Title will be chosen from the Top 5!
-        </description-holder>
-        <find-out-more class="button">FIND OUT MORE</find-out-more>
-      </likes-before-love>
-    </top-section>
-    <bottom-section class="block section-padding">
-      <!--Get all posts from finalists and append them here in a grid-->
-      <div class="fb-post" data-href="https://www.facebook.com/nisha.kumar.58/posts/10206095045120921" data-width="45%"></div>
-      <div class="fb-post" data-href="https://www.facebook.com/ashleyahnsii/posts/346095695574978" data-width="45%"></div>
-      <div class="fb-post" data-href="https://www.facebook.com/kohinoorkk/photos/a.1526715380910553.1073741830.1525440977704660/1543808355867922/?type=1&permPage=1" data-width="45%"></div>
-      <div class="fb-post" data-href="https://www.facebook.com/423298084491206/photos/a.433278260159855.1073741828.423298084491206/436200943200920/?type=1" data-width="45%"></div>
-      <div class="fb-post" data-href="https://www.facebook.com/amandakhong/photos/a.375441469289190.1073741828.375321509301186/397175257115811/?type=1&permPage=1" data-width="45%"></div>
-    </bottom-section>
-  </page-holder>
-</body>
+<!doctype html>
+<html ng-app="likesbeforelove">
+  <head>
+    <meta charset="utf-8">
+    <title>Likesbeforelove</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.11/angular-animate.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.11/angular-resource.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.11/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.11/angular-touch.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.11/angular-aria.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/models.js"></script>
+    <script src="js/services.js"></script>
+    <script>
+      // Browser compatibility check
+      if (window.attachEvent && !window.addEventListener) {
+	alert('Sorry, this application does not support IE8 and below. Please use a more modern browser.');
+      }
+    </script>
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <ng-view>
+    </ng-view>
+  </body>
 </html>
