@@ -6,8 +6,11 @@ var lblControllers = angular.module('lblControllers', [])
     }, 1000);
   }
 ])
-.controller('homeCtrl', ['$scope', '$window', '$location', 'Standard',
-  function ($scope, $window, $location, Standard) {
-    $window.facebookLogin();
+.controller('homeCtrl', ['$scope', '$window', '$location', 'Standard', 'Likes', 'Posts',
+  function ($scope, $window, $location, Standard, Likes, Posts) {
+    var finalistLikesArray = [];
+    for (var i = 0; i < $window.finalistUrls; i++) {
+      Likes.get({ finalistUrl: $window.finalistUrls[i] });
+    }
   }
 ]);
